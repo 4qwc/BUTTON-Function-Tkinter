@@ -9,7 +9,14 @@ root.title('Remote control')
 show = StringVar()
 show.set('ส่วนแสดงผลเริ่มต้น \nส่วนแสดงผลเริ่มต้น \nส่วนแสดงผลเริ่มต้น ')
 
+# --- *** function POWER ***---
+def ON():
+	show.set('POWER ON')
+	print('POWER ON')
 
+def Mute():
+	show.set('MUTE')
+	print('MUTE')
 
 #---*** function source ***--
 def YT():
@@ -108,10 +115,10 @@ F1.place(x=5, y=200)
 
 
 #*********************
-POWER = Button(root, text='ON', bg='red')
+POWER = Button(root, text='ON', bg='red', command=ON)
 POWER.place(x=10,y=2)
 
-MUTE = Button(root,text='MUTE')
+MUTE = Button(root,text='MUTE', command=Mute)
 MUTE.place(x=130,y=2)
 
 
